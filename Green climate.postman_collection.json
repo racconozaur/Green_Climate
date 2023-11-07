@@ -1,0 +1,1850 @@
+{
+	"info": {
+		"_postman_id": "77042047-0e3b-4537-b345-7e8a59622c68",
+		"name": "Green climate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24405792"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "405"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"195-yvuGtRNMZ9BSTFVwCPrGfu/PB+Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 19:34:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZmRlZTgxLWYyMzAtNDVkOS05ODgzLTg2NGZjZDllNTBmMyIsImlhdCI6MTY5OTM4NTY1NCwianRpIjoiMzEyOTYwY2UtYmFmNi00NzAzLTllZDMtZjYwNmY3ZjgxN2UxIn0.VOImn8iY0JwDNVWoAoV5QZKYUn844G05uRt8Mzbcogk\",\n    \"user\": {\n        \"id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n        \"username\": \"admin\",\n        \"is_admin\": false,\n        \"created_at\": \"2023-11-07T19:32:25.038Z\",\n        \"updated_at\": \"2023-11-07T19:32:25.038Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Is Auth",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/is-auth",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"is-auth"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Is Auth",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/is-auth",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"is-auth"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a1-eFTt+mYmkxPtgbTQWugQb8GO5sY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 19:34:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n    \"username\": \"admin\",\n    \"is_admin\": false,\n    \"created_at\": \"2023-11-07T19:32:25.038Z\",\n    \"updated_at\": \"2023-11-07T19:32:25.038Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "405"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"195-I/pq4Wy1v6GGe2PGUL3WSHK+HIo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 19:32:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZmRlZTgxLWYyMzAtNDVkOS05ODgzLTg2NGZjZDllNTBmMyIsImlhdCI6MTY5OTM4NTU0NSwianRpIjoiZmJkZjhjNTMtZmI4OC00ZTg0LWIwMzAtOTRmODdiY2EyNDE2In0.s2tVXy4MG2YU0CsLEWL6E9jAakjZ914wc3rIr_n-qP4\",\n    \"user\": {\n        \"id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n        \"username\": \"admin\",\n        \"is_admin\": false,\n        \"created_at\": \"2023-11-07T19:32:25.038Z\",\n        \"updated_at\": \"2023-11-07T19:32:25.038Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user?limit=10&page=1&username=adm",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "username",
+									"value": "adm"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user?limit=10&page=1&username=adm",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "username",
+											"value": "adm"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b6-ekF+OodZ6sori7TfYZSulJj6Uxo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 21:54:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n            \"username\": \"admin\",\n            \"is_admin\": true,\n            \"created_at\": \"2023-11-07T19:32:25.038Z\",\n            \"updated_at\": \"2023-11-07T19:32:25.038Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"asdasd\",\n    \"password\": \"asdasd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"asdasd\",\n    \"password\": \"asdasd\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a2-itKQzxcfhw/v6UyYMRdZacwBbuI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 21:55:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"50ad672b-2ede-453d-b417-888caabb675d\",\n    \"username\": \"asdasd\",\n    \"is_admin\": false,\n    \"created_at\": \"2023-11-07T21:55:06.297Z\",\n    \"updated_at\": \"2023-11-07T21:55:06.297Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Find one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5efdee81-f230-45d9-9883-864fcd9e50f3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find one",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5efdee81-f230-45d9-9883-864fcd9e50f3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "160"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a0-xHulhgsKl09J0at0dT7k3K0sRYM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 21:55:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n    \"username\": \"admin\",\n    \"is_admin\": true,\n    \"created_at\": \"2023-11-07T19:32:25.038Z\",\n    \"updated_at\": \"2023-11-07T19:32:25.038Z\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Comment",
+					"item": [
+						{
+							"name": "Find all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/post/:post_id/comment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post",
+										":post_id",
+										"comment"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Find all",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/post/:post_id/comment",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"post",
+												":post_id",
+												"comment"
+											],
+											"variable": [
+												{
+													"key": "post_id",
+													"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "299"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"12b-CcFLxfDsf/16rY8OSAwQ4yAJOi0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Nov 2023 22:09:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"items\": [\n        {\n            \"id\": \"5e0d022b-ea16-439a-b25c-a4a74852217e\",\n            \"post_id\": \"7b29c8ab-0f65-4a68-9ff9-48b30a828adc\",\n            \"user_id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n            \"created_at\": \"2023-11-07T22:09:30.792Z\",\n            \"comment\": \"asd\",\n            \"user\": {\n                \"id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n                \"username\": \"admin\",\n                \"is_admin\": true\n            }\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"comment\": \"asd\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/post/:post_id/comment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post",
+										":post_id",
+										"comment"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"comment\": \"asd\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/post/:post_id/comment",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"post",
+												":post_id",
+												"comment"
+											],
+											"variable": [
+												{
+													"key": "post_id",
+													"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "199"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"c7-UubIxjDUyEBkdiq6lhYnaz2yEdc\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Nov 2023 22:09:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"5e0d022b-ea16-439a-b25c-a4a74852217e\",\n    \"post_id\": \"7b29c8ab-0f65-4a68-9ff9-48b30a828adc\",\n    \"user_id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n    \"created_at\": \"2023-11-07T22:09:30.792Z\",\n    \"comment\": \"asd\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/post/:post_id/comment/:comment_id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post",
+										":post_id",
+										"comment",
+										":comment_id"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+										},
+										{
+											"key": "comment_id",
+											"value": "5e0d022b-ea16-439a-b25c-a4a74852217e"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/post/:post_id/comment/:comment_id",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"post",
+												":post_id",
+												"comment",
+												":comment_id"
+											],
+											"variable": [
+												{
+													"key": "post_id",
+													"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+												},
+												{
+													"key": "comment_id",
+													"value": "5e0d022b-ea16-439a-b25c-a4a74852217e"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Nov 2023 22:10:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Image",
+					"item": [
+						{
+							"name": "Find all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/post/:post_id/image",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post",
+										":post_id",
+										"image"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Find all",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/post/:post_id/image",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"post",
+												":post_id",
+												"image"
+											],
+											"variable": [
+												{
+													"key": "post_id",
+													"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "405"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"195-jbESoMGcLxTf0JvJrGPgNjg7j9I\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Nov 2023 22:07:33 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"images\": [\n        {\n            \"id\": \"370416b2-8336-4e2e-957c-5b70379cd053\",\n            \"post_id\": \"7b29c8ab-0f65-4a68-9ff9-48b30a828adc\",\n            \"order\": 1,\n            \"name\": \"http://localhost:3000/1699394848655-9.png\",\n            \"created_at\": \"2023-11-07T22:07:28.685Z\"\n        },\n        {\n            \"id\": \"3a373870-b8ba-4690-afc8-45b7699c539b\",\n            \"post_id\": \"7b29c8ab-0f65-4a68-9ff9-48b30a828adc\",\n            \"order\": 2,\n            \"name\": \"http://localhost:3000/1699394848664-10.png\",\n            \"created_at\": \"2023-11-07T22:07:28.685Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "images",
+											"type": "file",
+											"src": [
+												"/Users/whitefox/Downloads/9.png",
+												"/Users/whitefox/Downloads/10.png"
+											]
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/post/:post_id/image",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post",
+										":post_id",
+										"image"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": [
+														"/Users/whitefox/Downloads/9.png",
+														"/Users/whitefox/Downloads/10.png"
+													]
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/post/:post_id/image",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"post",
+												":post_id",
+												"image"
+											],
+											"variable": [
+												{
+													"key": "post_id",
+													"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "405"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"195-jbESoMGcLxTf0JvJrGPgNjg7j9I\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Nov 2023 22:07:28 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"images\": [\n        {\n            \"id\": \"370416b2-8336-4e2e-957c-5b70379cd053\",\n            \"post_id\": \"7b29c8ab-0f65-4a68-9ff9-48b30a828adc\",\n            \"order\": 1,\n            \"name\": \"http://localhost:3000/1699394848655-9.png\",\n            \"created_at\": \"2023-11-07T22:07:28.685Z\"\n        },\n        {\n            \"id\": \"3a373870-b8ba-4690-afc8-45b7699c539b\",\n            \"post_id\": \"7b29c8ab-0f65-4a68-9ff9-48b30a828adc\",\n            \"order\": 2,\n            \"name\": \"http://localhost:3000/1699394848664-10.png\",\n            \"created_at\": \"2023-11-07T22:07:28.685Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Update order",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"items\": [\n        {\n            \"id\": \"370416b2-8336-4e2e-957c-5b70379cd053\",\n            \"order\": 3\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/post/:post_id/image",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post",
+										":post_id",
+										"image"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update order",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"items\": [\n        {\n            \"id\": \"370416b2-8336-4e2e-957c-5b70379cd053\",\n            \"order\": 3\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/post/:post_id/image",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"post",
+												":post_id",
+												"image"
+											],
+											"variable": [
+												{
+													"key": "post_id",
+													"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "405"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"195-yxg2jQc5d+HRhGwA0jqsdl5wIic\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Nov 2023 22:08:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"images\": [\n        {\n            \"id\": \"3a373870-b8ba-4690-afc8-45b7699c539b\",\n            \"post_id\": \"7b29c8ab-0f65-4a68-9ff9-48b30a828adc\",\n            \"order\": 2,\n            \"name\": \"http://localhost:3000/1699394848664-10.png\",\n            \"created_at\": \"2023-11-07T22:07:28.685Z\"\n        },\n        {\n            \"id\": \"370416b2-8336-4e2e-957c-5b70379cd053\",\n            \"post_id\": \"7b29c8ab-0f65-4a68-9ff9-48b30a828adc\",\n            \"order\": 3,\n            \"name\": \"http://localhost:3000/1699394848655-9.png\",\n            \"created_at\": \"2023-11-07T22:07:28.685Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/post/:post_id/image/:image_id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post",
+										":post_id",
+										"image",
+										":image_id"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+										},
+										{
+											"key": "image_id",
+											"value": "8745de8d-d859-44ef-b66d-d7b029be82ca"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/post/:post_id/image/:image_id",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"post",
+												":post_id",
+												"image",
+												":image_id"
+											],
+											"variable": [
+												{
+													"key": "post_id",
+													"value": "7b29c8ab-0f65-4a68-9ff9-48b30a828adc"
+												},
+												{
+													"key": "image_id",
+													"value": "43f15564-bb36-45f1-9f59-d0d4f768a1cb"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Nov 2023 22:02:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/post?limit=10&page=1&title",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "title",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/post?limit=10&page=1&title",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "title",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "325"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"145-N86dNmq7KqybzFmeAcdbpmphmSg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 21:57:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"bec5f4ab-5b79-41bd-8572-2f6371d9c3c9\",\n            \"user_id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n            \"title\": \"asd\",\n            \"body\": \"hello\",\n            \"created_at\": \"2023-11-07T21:57:22.533Z\",\n            \"updated_at\": \"2023-11-07T21:57:22.533Z\",\n            \"user\": {\n                \"id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n                \"username\": \"admin\",\n                \"is_admin\": true\n            },\n            \"images\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"asd\",\n    \"body\": \"hello\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/post",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"asd\",\n    \"body\": \"hello\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/post",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "303"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12f-HncSGE85VpCI1R+UpvQEULN1Fk4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 21:57:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bec5f4ab-5b79-41bd-8572-2f6371d9c3c9\",\n    \"user_id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n    \"title\": \"asd\",\n    \"body\": \"hello\",\n    \"created_at\": \"2023-11-07T21:57:22.533Z\",\n    \"updated_at\": \"2023-11-07T21:57:22.533Z\",\n    \"user\": {\n        \"id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n        \"username\": \"admin\",\n        \"is_admin\": true\n    },\n    \"images\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Find one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/post/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "bec5f4ab-5b79-41bd-8572-2f6371d9c3c9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find one",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/post/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "bec5f4ab-5b79-41bd-8572-2f6371d9c3c9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "303"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12f-HncSGE85VpCI1R+UpvQEULN1Fk4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 21:58:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bec5f4ab-5b79-41bd-8572-2f6371d9c3c9\",\n    \"user_id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n    \"title\": \"asd\",\n    \"body\": \"hello\",\n    \"created_at\": \"2023-11-07T21:57:22.533Z\",\n    \"updated_at\": \"2023-11-07T21:57:22.533Z\",\n    \"user\": {\n        \"id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n        \"username\": \"admin\",\n        \"is_admin\": true\n    },\n    \"images\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": null,\n    \"body\": \"asdasd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/post/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "bec5f4ab-5b79-41bd-8572-2f6371d9c3c9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": null,\n    \"body\": \"asdasd\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/post/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "bec5f4ab-5b79-41bd-8572-2f6371d9c3c9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "304"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"130-qC5v0jwBdU5eGVrPw4qc70DHRo0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 21:59:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bec5f4ab-5b79-41bd-8572-2f6371d9c3c9\",\n    \"user_id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n    \"title\": \"asd\",\n    \"body\": \"asdasd\",\n    \"created_at\": \"2023-11-07T21:57:22.533Z\",\n    \"updated_at\": \"2023-11-07T21:59:06.675Z\",\n    \"user\": {\n        \"id\": \"5efdee81-f230-45d9-9883-864fcd9e50f3\",\n        \"username\": \"admin\",\n        \"is_admin\": true\n    },\n    \"images\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/post/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "bec5f4ab-5b79-41bd-8572-2f6371d9c3c9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/post/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"post",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "bec5f4ab-5b79-41bd-8572-2f6371d9c3c9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 21:59:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
