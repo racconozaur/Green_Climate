@@ -28,8 +28,25 @@
 
 ## Installation
 
+To install all required packages.
+```bash
+$ npm i -g typescript nodemon ts-node yarn prisma
+```
+
+To install all local packages.
 ```bash
 $ yarn install
+```
+
+Also you will need to install local postgres or docker and install postgres to docker..
+With username and password - postgres.
+```bash
+$ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+```
+
+Now you need to migrate the database.
+```bash
+$ prisma migrate dev
 ```
 
 ## Running the app
@@ -43,19 +60,6 @@ $ yarn run start:dev
 
 # production mode
 $ yarn run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
 ```
 
 ## Support

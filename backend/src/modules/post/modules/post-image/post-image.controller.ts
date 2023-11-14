@@ -17,7 +17,7 @@ import { FilesInterceptor } from '@nestjs/platform-express'
 import { PostImageIdParamDto } from './dto/post-image-id-param.dto'
 import { UserGuard } from '../../../user-guard/user.guard'
 
-@UseGuards(UserGuard)
+// @UseGuards(UserGuard)
 @Controller()
 export class PostImageController {
   constructor(private readonly postImageService: PostImageService) {}
